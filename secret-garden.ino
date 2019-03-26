@@ -1,7 +1,7 @@
 /***************************************************************
 ---------------- SecretGardenSoft - Version 1.0 ---------------- 
 Authors : Sébastien Serre, François Bekemen, Jean-Alexis
-          Gagnière, Xavier Nomisico, Laurie Cazals
+          Gagnière, Xavier Nomicisio, Laurie Cazals
 Last Update : 20-03-2019
 ***************************************************************/
 
