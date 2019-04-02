@@ -1,5 +1,7 @@
 # secret-garden
 
+![jardin secret](secret-garden/img/jardin.jpg)
+
 ## Members
 
 * Bekemen François françois.bekemen@efrei.net
