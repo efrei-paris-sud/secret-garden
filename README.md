@@ -1,6 +1,6 @@
 # secret-garden
 
-![jardin secret](secret-garden/img/jardin.jpg)
+![](/img/jardin.jpg)
 
 ## Members
 
