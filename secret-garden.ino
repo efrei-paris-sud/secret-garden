@@ -1,7 +1,8 @@
 /***************************************************************
----------------- SmartGardenSoft - Version 1.0 ---------------- 
-Authors : Sébastien Serre, Mehdi Bahnis
-Last Update : 22-05-2017
+---------------- SecretGardenSoft - Version 1.0 ---------------- 
+Authors : Sébastien Serre, François Bekemen, Jean-Alexis
+          Gagnière, Xavier Nomicisio, Laurie Cazals
+Last Update : 20-03-2019
 ***************************************************************/
 
 #include <LiquidCrystal.h>
