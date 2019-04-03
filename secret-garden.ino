@@ -1,8 +1,7 @@
 /***************************************************************
----------------- SecretGardenSoft - Version 1.0 ---------------- 
-Authors : Sébastien Serre, François Bekemen, Jean-Alexis
-          Gagnière, Xavier Nomisico, Laurie Cazals
-Last Update : 20-03-2019
+---------------- SmartGardenSoft - Version 1.0 ---------------- 
+Authors : Sébastien Serre, Mehdi Bahnis
+Last Update : 22-05-2017
 ***************************************************************/
 
 #include <LiquidCrystal.h>
@@ -25,6 +24,19 @@ int sensorValueHumidity;
 int sensorValueLight;
 int sensorValueTemp;
 int sensorValueWater;
+
+
+/****** Arrosage ******/
+
+bool getHumidityValue() {
+
+  sensorValueHumidity = analogRead(pinSensorHumidity);
+  
+  if (sensorValueHumidity > 700) {
+    return true;
+  }
+  return false;
+}
 
 /****** Eclairage ******/
 
@@ -137,6 +149,61 @@ void clearLCD () {
   
 }
 
+/****** LCD Bytes ******/
+
+byte celcius[8] = {
+  B01000,
+  B10100,
+  B01000,
+  B00011,
+  B00100,
+  B00100,
+  B00011,
+};  
+
+byte sun[8] = {
+  B00000,
+  B10101,
+  B01110,
+  B11111,
+  B01110,
+  B10101,
+  B00000,
+  B00000,
+};  
+
+byte humidity[8] = {
+  B00100,
+  B01110,
+  B11111,
+  B01000,
+  B00010,
+  B01000,
+  B00010,
+  B00000,
+};
+
+byte temp[8] = {
+  B00100,
+  B01010,
+  B01010,
+  B01110,
+  B11111,
+  B11111,
+  B01110,
+};
+
+byte water[8] = {
+  B00100,
+  B01110,
+  B01110,
+  B11111,
+  B11101,
+  B11111,
+  B01110,
+  B00000,
+};
+
 void setup() {
   Serial.begin(9600);
 
@@ -153,12 +220,29 @@ void setup() {
 
   //LCD
   lcd.begin(20, 4);
+  lcd.createChar(0, celcius);
+  lcd.createChar(1, sun);
+  lcd.createChar(2, humidity);
+  lcd.createChar(3, temp);
+  lcd.createChar(4, water);
 
+  lcd.setCursor(0, 0);
+  lcd.write(byte(1));
+  delay(1000);
+  lcd.setCursor(19, 0);
+  lcd.write(byte(2));
+  delay(1000);
+  lcd.setCursor(0, 3);
+  lcd.write(byte(3));
+  delay(1000);
+  lcd.setCursor(19, 3);
+  lcd.write(byte(4));
+  delay(1000);
   lcd.setCursor(0, 1);
   lcd.print("    SmartGarden");
   delay(1000);
   lcd.setCursor(0, 2);
-  lcd.print("    IoT Projet");
+  lcd.print("  ProjetTransverse");
   delay(5000);
 }
 
