@@ -240,10 +240,10 @@ void setup() {
   lcd.write(byte(4));
   delay(1000);
   lcd.setCursor(0, 1);
-  lcd.print("    SmartGarden");
+  lcd.print("   Secret Garden");
   delay(1000);
   lcd.setCursor(0, 2);
-  lcd.print("  ProjetTransverse");
+  lcd.print("   Projet IoT");
   delay(5000);
 }
 
