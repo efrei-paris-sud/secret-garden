@@ -2,7 +2,7 @@
 ---------------- SecretGardenSoft - Version 1.0 ---------------- 
 Authors : Sébastien Serre, François Bekemen, Jean-Alexis
           Gagnière, Xavier Nomicisio, Laurie Cazals
-Last Update : 20-03-2019
+Last Update : 15-04-2019
 ***************************************************************/
 
 #include <LiquidCrystal.h>
